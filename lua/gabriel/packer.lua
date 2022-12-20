@@ -11,13 +11,9 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- plugins to make things prettier
-  use { 
-    'RRethy/nvim-base16', 
-    config = function() 
-      vim.cmd('colorscheme base16-default-dark') 
-    end 
-  }
-  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use 'RRethy/nvim-base16'
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'NvChad/nvim-colorizer.lua'
   use "nvim-treesitter/nvim-tree-docs"
   use "nvim-treesitter/nvim-treesitter-textobjects"
   use "p00f/nvim-ts-rainbow"
