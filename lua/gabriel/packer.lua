@@ -6,17 +6,17 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'nvim-tree/nvim-web-devicons'
 
   -- plugins to make things prettier
   use 'RRethy/nvim-base16'
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'NvChad/nvim-colorizer.lua'
-  use "nvim-treesitter/nvim-tree-docs"
-  use "nvim-treesitter/nvim-treesitter-textobjects"
-  use "p00f/nvim-ts-rainbow"
+  use 'nvim-treesitter/nvim-tree-docs'
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'p00f/nvim-ts-rainbow'
   use 'petRUShka/vim-opencl'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
@@ -28,6 +28,14 @@ return require('packer').startup(function(use)
   use 'xolox/vim-misc'
   use 'matze/vim-move'
   use 'gpanders/editorconfig.nvim'
+  use({
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && npm install',
+    setup = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
+    end,
+    ft = { 'markdown' },
+  })
 
   -- file tree plugin
   use({
@@ -46,21 +54,21 @@ return require('packer').startup(function(use)
     'VonHeikemen/lsp-zero.nvim',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-nvim-lua'},
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
     }
   }
 end)

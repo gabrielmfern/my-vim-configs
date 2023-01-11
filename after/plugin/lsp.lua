@@ -28,6 +28,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
 
   ["<C-Space>"] = cmp.mapping.complete(),
+  ["<C-q>"] = cmp.mapping.complete(),
   ['<C-e>'] = cmp.mapping.abort(),
 
   ['<C-u>'] = cmp.mapping.scroll_docs(-4),
